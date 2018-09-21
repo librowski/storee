@@ -1,22 +1,53 @@
 import * as React from 'react';
-import './App.css';
-
-import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom';
+import AboutRoute from "./components/AboutRoute/AboutRoute";
+import {
+    AppBar,
+    Divider,
+    Drawer,
+    IconButton,
+    List,
+    ListItem,
+    ListItemIcon,
+    Toolbar,
+    Typography
+} from "@material-ui/core";
 
 class App extends React.Component {
-  public render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    public render() {
+        return (
+            <div className="App">
+                <BrowserRouter>
+                    <div>
+                        <AppBar>
+                            <Toolbar>
+                                <Typography variant={"title"} color={"secondary"}>Gitlab Vial</Typography>
+                            </Toolbar>
+                        </AppBar>
+                        <Drawer
+                            variant="permanent"
+                            open={true}
+                        >
+                            <div>
+                                <IconButton>
+
+                                </IconButton>
+                            </div>
+                            <Divider />
+                            <List>
+                                <ListItem button={true}>
+                                    <ListItemIcon>
+                                        <IconButton />
+                                    </ListItemIcon>
+                                </ListItem>
+                            </List>
+                        </Drawer>
+                        <Route path={'/about'} exact={true} component={AboutRoute} />
+                    </div>
+                </BrowserRouter>
+            </div>
+        );
+    }
 }
 
 export default App;
