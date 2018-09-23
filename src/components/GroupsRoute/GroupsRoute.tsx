@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-class AboutRoute extends React.PureComponent {
+class GroupsRoute extends React.PureComponent {
     render() {
         return (
             <div>
-                About
+                Groups
             </div>
         );
     }
 }
 
-export default AboutRoute;
+export default GroupsRoute;
