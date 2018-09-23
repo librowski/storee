@@ -1,32 +1,31 @@
 import * as React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-import {createMuiTheme, createStyles, CssBaseline, MuiThemeProvider} from "@material-ui/core";
+import {createMuiTheme, CssBaseline, MuiThemeProvider} from "@material-ui/core";
 import Navigation from "./components/Navigation/Navigation";
 import CharactersRoute from "./components/CharactersRoute/CharactersRoute";
 import GroupsRoute from "./components/GroupsRoute/GroupsRoute";
 import LocationsRoute from "./components/LocationsRoute/LocationsRoute";
 import ThreadsRoute from "./components/ThreadsRoute/ThreadsRoute";
 import ConnectionsRoute from "./components/ConnectionsRoute/ConnectionsRoute";
-import {createStore} from "redux";
+import {AnyAction, combineReducers, createStore, Store} from "redux";
 import {Provider} from "react-redux";
-import {combineReducers} from 'redux';
 import {charactersReduce} from "./store/Character/reducer";
 import {composeWithDevTools} from "redux-devtools-extension";
+import {Character} from "./store/Character/types";
+import {Resource} from "./store/types";
+
+export interface AppState {
+    characters: Resource<Character>;
+}
 
 export const rootReducer = combineReducers({
     characters: charactersReduce,
 });
 
-const store = createStore(
+const store: Store<AppState, AnyAction> = createStore(
     rootReducer,
     composeWithDevTools(),
 );
-
-const styles = createStyles({
-   app: {
-       minHeight: '100%',
-   }
-});
 
 const theme = createMuiTheme({
 
@@ -39,7 +38,7 @@ class App extends React.Component {
                 <React.Fragment>
                     <CssBaseline />
                     <MuiThemeProvider theme={theme}>
-                        <div style={styles.app}>
+                        <div>
                             <BrowserRouter>
                                     <Navigation>
                                         <Route path={'/characters'} component={CharactersRoute} />
