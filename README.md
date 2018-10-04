@@ -1,5 +1,7 @@
 <img src="https://i.imgur.com/MREVFNF.png" />
+
 # Storee
+
 ## Prototype of application for writers, rpg game masters and other creators of plots and stories
 
 <b>Features goals</b>:
