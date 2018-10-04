@@ -22,8 +22,8 @@ export const getCharacters = () => {
         dispatch(charactersFetchRequest);
 
         FSCharacters.get()
-            .then((response) => {
-                const characters: Character[] = response.docs.map(character => ({
+            .then((response: any) => {
+                const characters: Character[] = response.docs.map((character: any) => ({
                     name: character.data().name.toString(),
                     description: character.data().description.toString(),
                     connections: [],

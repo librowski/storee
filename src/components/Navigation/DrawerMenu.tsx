@@ -12,7 +12,7 @@ class DrawerMenu extends React.Component<DrawerMenuProps> {
         const open = this.props.isDrawerOpen;
 
         return (
-            <List>
+            <List disablePadding={true}>
                 <DrawerMenuLink
                     isDrawerOpen={open}
                     icon={<Person color={'inherit'}/>}

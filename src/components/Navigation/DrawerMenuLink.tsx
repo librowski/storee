@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {RouteComponentProps, withRouter} from "react-router";
-import {createStyles, Fade, ListItem, ListItemIcon, Typography} from "@material-ui/core";
+import {createStyles, Fade, ListItem, ListItemIcon, Theme, Typography, WithStyles, withStyles} from "@material-ui/core";
 
-const styles = createStyles({
+const styles = (theme: Theme) => createStyles({
     activeLink: {
-        color: '#aaaaff',
+        color: theme.palette.primary.dark,
     },
     activeMenuItem: {
-        backgroundColor: '#aaaaff40',
+        backgroundColor: theme.palette.primary.light,
     },
 });
 
@@ -18,25 +18,26 @@ interface DrawerMenuLinkProps {
     isDrawerOpen: boolean;
 }
 
-class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponentProps> {
+class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponentProps & WithStyles<typeof styles>> {
 
     render() {
         const isActive = this.props.path === this.props.location.pathname;
+        const {classes} = this.props;
 
         return (
             <ListItem
                 button={true}
-                style={isActive ? styles.activeMenuItem : {}}
+                className={isActive ? classes.activeMenuItem : undefined}
                 onClick={this.handleClick}
             >
                 <ListItemIcon
-                    style={isActive ? styles.activeLink : {}}
+                    className={isActive ? classes.activeLink : undefined}
                 >
                     {this.props.icon}
                 </ListItemIcon>
                 <Fade in={this.props.isDrawerOpen}>
                     <Typography
-                        style={isActive ? styles.activeLink : {}}
+                        className={isActive ? classes.activeLink : undefined}
                     >
                         {this.props.title}
                     </Typography>
@@ -51,4 +52,4 @@ class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponen
 
 }
 
-export default withRouter(DrawerMenuLink);
+export default withRouter(withStyles(styles,{withTheme: true})(DrawerMenuLink));

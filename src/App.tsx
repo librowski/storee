@@ -28,7 +28,14 @@ const store: Store<AppState, AnyAction> = createStore(
 );
 
 const theme = createMuiTheme({
-
+    palette: {
+        primary: {
+            light: '#E8FFFF',
+            main: '#B9F6CA',
+            dark: '#69966A',
+            contrastText: '#FFF',
+        }
+    }
 });
 
 class App extends React.Component {
