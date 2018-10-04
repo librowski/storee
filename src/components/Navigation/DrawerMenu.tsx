@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {List} from "@material-ui/core";
-import {Book, CompareArrows, LocationCity, People, Person} from "@material-ui/icons";
+import {Book, CompareArrows, Face, LocationCity, People} from "@material-ui/icons";
 import DrawerMenuLink from "./DrawerMenuLink";
 
 interface DrawerMenuProps {
@@ -15,7 +15,7 @@ class DrawerMenu extends React.Component<DrawerMenuProps> {
             <List disablePadding={true}>
                 <DrawerMenuLink
                     isDrawerOpen={open}
-                    icon={<Person color={'inherit'}/>}
+                    icon={<Face color={'inherit'}/>}
                     title={'Characters'}
                     path={'/characters'}
                 />
