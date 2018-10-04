@@ -1,8 +1,9 @@
 <img src="https://i.imgur.com/MREVFNF.png" />
 
-# Storee
-
-## Prototype of application for writers, rpg game masters and other creators of plots and stories
+<div style="margin: auto">
+<h1>Storee</h1>
+<p>Prototype of application for writers, rpg game masters and other creators of plots and stories</p>
+</div>
 
 <b>Features goals</b>:
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
