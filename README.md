@@ -9,6 +9,7 @@
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
 - [ ] Adding, editing, displaying story entities
   - [x] Displaying characters list
+  - [ ] Integration with Quill.js
 - [ ] Map of a story (graph of connections)
 - [ ] Adding custom properties to entities
 - [ ] Sorting and filtering particular entities depending on their properties
