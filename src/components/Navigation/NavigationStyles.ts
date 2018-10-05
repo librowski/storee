@@ -42,6 +42,7 @@ export const NavigationStyles = (theme: Theme): StyleRules => createStyles({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
         }),
+        overflow: 'hidden',
     },
     drawerPaperClose: {
         transition: theme.transitions.create('width', {

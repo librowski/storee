@@ -34,7 +34,12 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
                         >
                             <Menu />
                         </IconButton>
-                        <Typography variant={"title"}>Storee</Typography>
+                        <Typography
+                            variant={"title"}
+                            color={'inherit'}
+                        >
+                            Storee
+                        </Typography>
                     </Toolbar>
                 </AppBar>
                 <Drawer

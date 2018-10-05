@@ -31,6 +31,6 @@ export const getCharacters = () => {
                 console.log(characters);
                 dispatch(charactersFetchSuccess(characters));
             })
-            .catch(() => dispatch(charactersFetchFailure));
+            .catch((error) => dispatch(charactersFetchFailure));
     };
-}
+};

@@ -3,9 +3,10 @@ import {CharacterAction} from "../../store/Character/reducer";
 import {Dispatch} from "redux";
 import {getCharacters} from "../../store/Character/actions";
 import {connect} from "react-redux";
-import {Button, Paper, Typography} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import {Character} from "../../store/Character/types";
 import {AppState} from "../../App";
+import EntityCard from "../EntityCard/EntityCard";
 
 interface CharactersRouteProps {
     fetchCharacters: () => void;
@@ -21,23 +22,27 @@ const mapStateToProps = (state: AppState) => ({
 });
 
 class CharactersRoute extends React.PureComponent<CharactersRouteProps> {
+
+    componentDidMount() {
+        this.props.fetchCharacters();
+    }
     render() {
         return (
             <div>
-                <Button onClick={this.props.fetchCharacters}>
-                    Fetch Characters
-                </Button>
+                <Grid container={true} spacing={24}>
                 {
                     this.props.characters.map(
-                        character => {
+                        (character, index) => {
                             return (
-                                <Paper>
-                                    <Typography variant={'title'}>{character.name}</Typography>
-                                    <Typography>{character.description}</Typography>
-                                </Paper>
+                                <EntityCard
+                                    key={index}
+                                    name={character.name}
+                                    description={character.description}
+                                />
                             );
                     })
                 }
+                </Grid>
             </div>
         );
     }

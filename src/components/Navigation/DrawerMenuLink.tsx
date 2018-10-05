@@ -7,7 +7,7 @@ const styles = (theme: Theme) => createStyles({
         color: theme.palette.primary.dark,
     },
     activeMenuItem: {
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: theme.palette.grey["200"],
     },
 });
 
