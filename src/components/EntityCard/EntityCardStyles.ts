@@ -23,8 +23,8 @@ export const style = createStyles({
             '& > div:last-child': {
                 height: '100%',
                 '& > :first-child': {
-                    opacity: 0,
-                    transform: 'translate(-50%, -200px)',
+                    opacity: 0.5,
+                    top: '2em',
                 },
                 '& > :last-child': {
                     opacity: 1,
@@ -41,7 +41,7 @@ export const style = createStyles({
         bottom: 0,
         color: '#FFF',
         overflow: 'hidden',
-        transition: 'all 400ms ease',
+        transition: 'all 320ms ease',
     },
     nameText: {
         position: 'absolute',
@@ -49,11 +49,11 @@ export const style = createStyles({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         opacity: 1,
-        transition: 'all 400ms ease',
+        transition: 'all 320ms ease',
         width: '90%',
     },
     descriptionDiv: {
-        transition: 'all 400ms ease',
+        transition: 'all 320ms ease',
         position: 'absolute',
         top: '50%',
         left: '50%',
