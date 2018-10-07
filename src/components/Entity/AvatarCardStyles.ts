@@ -5,6 +5,10 @@ export const AvatarCardStyles = createStyles({
         height: '20em',
         position: 'relative',
         background: 'linear-gradient(180deg, #6C7574 50%, #FFF 50%)',
+        marginBottom: '1.5em',
+        '@media(max-width: 635px)': {
+            marginBottom: '3em',
+        }
     },
     contentContainer: {
         position: 'absolute',
@@ -33,7 +37,9 @@ export const AvatarCardStyles = createStyles({
             height: '12em',
             width: '12em',
             zIndex: 1,
-        }
+        },
+        background: `url(https://picsum.photos/300/300/?random?t=${Date.now()}) no-repeat center`,
+        backgroundSize: 'cover',
     },
     nameContainer: {
         position: 'absolute',

@@ -20,7 +20,7 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
         return (
             <div className={classes.root}>
                 <AppBar
-                    position={'absolute'}
+                    position={'static'}
                     className={classNames(classes.appBar, this.state.isDrawerOpen && classes.appBarShift)}
                 >
                     <Toolbar
@@ -57,8 +57,7 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
                     <Divider />
                     <DrawerMenu isDrawerOpen={this.state.isDrawerOpen}/>
                 </Drawer>
-                <main className={classes.content}>
-                    <div className={classes.toolbar} />
+                <main className={classNames(classes.content, this.state.isDrawerOpen && classes.contentBlur)}>
                     {this.props.children}
                 </main>
             </div>

@@ -6,9 +6,9 @@ const drawerWidth = 240;
 export const NavigationStyles = (theme: Theme): StyleRules => createStyles({
     root: {
         flexGrow: 1,
-        height: '100vh',
+        flexDirection: 'column',
+        minHeight: '100vh',
         zIndex: 1,
-        overflow: 'hidden',
         position: 'relative',
         display: 'flex',
     },
@@ -35,7 +35,7 @@ export const NavigationStyles = (theme: Theme): StyleRules => createStyles({
         display: 'none',
     },
     drawerPaper: {
-        position: 'relative',
+        position: 'absolute',
         whiteSpace: 'nowrap',
         width: drawerWidth,
         transition: theme.transitions.create('width', {
@@ -59,11 +59,25 @@ export const NavigationStyles = (theme: Theme): StyleRules => createStyles({
         alignItems: 'center',
         justifyContent: 'flex-end',
         padding: '0 8px',
-        ...theme.mixins.toolbar,
+        height: '56px',
+        [theme.breakpoints.up('sm')]: {
+            height: '64px',
+        },
     },
     content: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing.unit * 3,
+        transition: theme.transitions.create('marginLeft', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        marginLeft: theme.spacing.unit * 7,
+        [theme.breakpoints.up('sm')]: {
+            marginLeft: theme.spacing.unit * 9,
+        },
     },
+    contentBlur: {
+        filter: 'brightness(50%) blur(3px)',
+    }
 });
