@@ -37,4 +37,4 @@ class AvatarCard extends React.Component<AvatarCardProps & WithStyles<typeof Ava
     }
 }
 
-export default withStyles(AvatarCardStyles)(AvatarCard);
+export default withStyles(AvatarCardStyles, {withTheme: true})(AvatarCard);

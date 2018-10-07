@@ -1,18 +1,18 @@
-import {createStyles} from "@material-ui/core";
+import {createStyles, Theme} from "@material-ui/core";
 
-export const AvatarCardStyles = createStyles({
+export const AvatarCardStyles = (theme: Theme) => createStyles({
     card: {
-        height: '20em',
+        height: 40 * theme.spacing.unit,
         position: 'relative',
         background: 'linear-gradient(180deg, #6C7574 50%, #FFF 50%)',
-        marginBottom: '1.5em',
+        marginBottom: 3 * theme.spacing.unit,
         '@media(max-width: 635px)': {
-            marginBottom: '3em',
+            marginBottom: 6 * theme.spacing.unit,
         }
     },
     contentContainer: {
         position: 'absolute',
-        width: 'calc(100% - 10em)',
+        width: `calc(100% - ${20 * theme.spacing.unit}px)`,
         height: '80%',
         zIndex: 2,
         top: '50%',
@@ -27,15 +27,15 @@ export const AvatarCardStyles = createStyles({
         }
     },
     avatar: {
-        height: '16em',
-        width: '16em',
+        height: 32 * theme.spacing.unit,
+        width: 32 * theme.spacing.unit,
         borderRadius: '100%',
-        marginRight: '-8em',
+        marginRight: -16 * theme.spacing.unit,
         zIndex: 3,
         '@media(max-width: 635px)': {
             marginRight: 0,
-            height: '12em',
-            width: '12em',
+            height: -24 * theme.spacing.unit,
+            width: -24 * theme.spacing.unit,
             zIndex: 1,
         },
         background: `url(https://picsum.photos/300/300/?random?t=${Date.now()}) no-repeat center`,
@@ -47,18 +47,18 @@ export const AvatarCardStyles = createStyles({
         zIndex: 2,
         textAlign: 'center',
         width: '100%',
-        minHeight: '3em',
+        minHeight: 6 * theme.spacing.unit,
         background: '#2D3132',
         color: '#FFF',
         display: 'flex',
         alignItems: 'center',
         '@media(max-width: 635px)': {
             justifyContent: 'center',
-            top: '-2em',
+            top: -4 * theme.spacing.unit,
         }
     },
     name: {
-        marginLeft: '1em',
+        marginLeft: 2 * theme.spacing.unit,
         '@media(max-width: 635px)': {
             marginLeft: 0,
         }
@@ -68,20 +68,20 @@ export const AvatarCardStyles = createStyles({
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'center',
-        paddingRight: '0.5em',
+        paddingRight: theme.spacing.unit,
         '@media(max-width: 635px)': {
             paddingRight: 0,
             position: 'absolute',
-            bottom: '-4em',
+            bottom: -8 * theme.spacing.unit,
         }
     },
     badge: {
-        margin: '0.5em',
+        margin: theme.spacing.unit,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '3em',
-        width: '3em',
+        height: 6 * theme.spacing.unit,
+        width: 6 * theme.spacing.unit,
         color: '#6C7574',
         borderRadius: '100%',
     }

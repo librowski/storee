@@ -1,6 +1,6 @@
-import {createStyles} from "@material-ui/core";
+import {createStyles, Theme} from "@material-ui/core";
 
-export const EntityPaperStyles = createStyles({
+export const EntityPaperStyles = (theme: Theme) => createStyles({
     mainWrapper: {
         position: 'relative',
         flex: '1 1 auto',
@@ -10,7 +10,7 @@ export const EntityPaperStyles = createStyles({
     paperHeader: {
         width: '100%',
         position: 'absolute',
-        top: '-0.5em',
+        top: -1 * theme.spacing.unit,
         display: 'flex',
         alignItems: 'center',
     },
@@ -20,16 +20,17 @@ export const EntityPaperStyles = createStyles({
         flex: '1 1 auto',
     },
     paperTopCircle: {
-        height: '0.5em',
-        width: '0.5em',
+        height: theme.spacing.unit,
+        width: theme.spacing.unit,
         borderRadius: '100%',
         background: '#C6CECD',
     },
     paperTitle: {
-        margin: '0 1em 0 1em',
+        marginLeft: 2 * theme.spacing.unit,
+        marginRight: 2 * theme.spacing.unit,
     },
     contentContainer: {
         flex: '1 1 auto',
-        padding: '2em',
+        padding: 4 * theme.spacing.unit,
     }
 });
