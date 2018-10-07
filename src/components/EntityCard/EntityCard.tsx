@@ -2,13 +2,14 @@ import * as React from 'react';
 import {Grid, Paper, Typography, WithStyles, withStyles} from "@material-ui/core";
 import Truncate from 'react-truncate';
 import {style} from "./EntityCardStyles";
+import {RouteComponentProps, withRouter} from "react-router";
 
 type EntityCardProps = {
     name: string;
     description: string;
 }
 
-class EntityCard extends React.PureComponent<EntityCardProps & WithStyles<typeof style>> {
+class EntityCard extends React.PureComponent<EntityCardProps & RouteComponentProps & WithStyles<typeof style>> {
 
     render() {
         const {classes, name, description} = this.props;
@@ -29,6 +30,7 @@ class EntityCard extends React.PureComponent<EntityCardProps & WithStyles<typeof
                         className={classes.paper}
                         square={true}
                         elevation={6}
+                        onClick={this.handleCardClick}
                     >
                         <div className={classes.imageContainer} style={dynamicStyle}/>
                         <div className={classes.textContainer}>
@@ -49,6 +51,10 @@ class EntityCard extends React.PureComponent<EntityCardProps & WithStyles<typeof
             </Grid>
         );
     }
+
+    private handleCardClick = () => {
+        this.props.history.push('characters/1');
+    }
 }
 
-export default withStyles(style)(EntityCard);
+export default withRouter(withStyles(style)(EntityCard));

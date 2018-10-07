@@ -7,6 +7,8 @@ import {Grid} from "@material-ui/core";
 import {Character} from "../../store/Character/types";
 import {AppState} from "../../App";
 import EntityCard from "../EntityCard/EntityCard";
+import {Route, Switch} from "react-router";
+import Entity from "../Entity/Entity";
 
 interface CharactersRouteProps {
     fetchCharacters: () => void;
@@ -21,29 +23,32 @@ const mapStateToProps = (state: AppState) => ({
     characters: state.characters.data,
 });
 
-class CharactersRoute extends React.PureComponent<CharactersRouteProps> {
+class CharactersRoute extends React.Component<CharactersRouteProps> {
 
     componentDidMount() {
         this.props.fetchCharacters();
     }
     render() {
         return (
-            <div>
-                <Grid container={true} spacing={24}>
-                {
-                    this.props.characters.map(
-                        (character, index) => {
-                            return (
-                                <EntityCard
-                                    key={index}
-                                    name={character.name}
-                                    description={character.description}
-                                />
-                            );
-                    })
-                }
-                </Grid>
-            </div>
+            <Switch>
+                <Route path={'/characters/1'} component={Entity}/>
+                <Route>
+                    <Grid container={true} spacing={24}>
+                        {
+                            this.props.characters.map(
+                                (character, index) => {
+                                    return (
+                                        <EntityCard
+                                            key={index}
+                                            name={character.name}
+                                            description={character.description}
+                                        />
+                                    );
+                                })
+                        }
+                    </Grid>
+                </Route>
+            </Switch>
         );
     }
 }
