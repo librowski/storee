@@ -4,7 +4,7 @@ export const AvatarCardStyles = (theme: Theme) => createStyles({
     card: {
         height: 40 * theme.spacing.unit,
         position: 'relative',
-        background: 'linear-gradient(180deg, #6C7574 50%, #FFF 50%)',
+        background: `linear-gradient(180deg, ${theme.palette.primary.main} 50%, ${theme.palette.background.paper} 50%)`,
         marginBottom: 3 * theme.spacing.unit,
         '@media(max-width: 635px)': {
             marginBottom: 6 * theme.spacing.unit,
@@ -48,7 +48,7 @@ export const AvatarCardStyles = (theme: Theme) => createStyles({
         textAlign: 'center',
         width: '100%',
         minHeight: 6 * theme.spacing.unit,
-        background: '#2D3132',
+        background: theme.palette.primary.dark,
         color: '#FFF',
         display: 'flex',
         alignItems: 'center',
@@ -82,7 +82,8 @@ export const AvatarCardStyles = (theme: Theme) => createStyles({
         alignItems: 'center',
         height: 6 * theme.spacing.unit,
         width: 6 * theme.spacing.unit,
-        color: '#6C7574',
+        color: theme.palette.primary.contrastText,
+        background: theme.palette.secondary.main,
         borderRadius: '100%',
     }
 });

@@ -16,7 +16,7 @@ class AvatarCard extends React.Component<EntityPaperProps & WithStyles<typeof En
                 <div className={classes.paperHeader}>
                     <div className={classes.paperTopLine}/>
                     <div className={classes.paperTopCircle}/>
-                    <Typography className={classes.paperTitle} variant={"caption"}>
+                    <Typography className={classes.paperTitle} variant={"caption"} color={"primary"}>
                         {this.props.title.toUpperCase()}
                     </Typography>
                     <div className={classes.paperTopCircle}/>

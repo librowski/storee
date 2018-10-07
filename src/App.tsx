@@ -30,14 +30,24 @@ const store: Store<AppState, AnyAction> = createStore(
 const theme = createMuiTheme({
     palette: {
         primary: {
-            light: '#E8FFFF',
-            main: '#B9F6CA',
-            dark: '#69966A',
+            light: '#D7CCC8',
+            main: '#795548',
+            dark: '#5D4037',
             contrastText: '#FFF',
         },
+        secondary: {
+            light: '#607D8B',
+            dark: '#607D8B',
+            contrastText: '#FFF',
+            main: '#607D8B',
+        },
         background: {
-            default: '#E8FFFF',
-        }
+            default: '#EBEBEB',
+        },
+        text: {
+            primary: '#212121',
+            secondary: '#757575',
+        },
     }
 });
 

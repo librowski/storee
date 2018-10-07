@@ -16,14 +16,14 @@ export const EntityPaperStyles = (theme: Theme) => createStyles({
     },
     paperTopLine: {
         height: '1px',
-        background: '#C6CECD',
+        background: theme.palette.primary.main,
         flex: '1 1 auto',
     },
     paperTopCircle: {
         height: theme.spacing.unit,
         width: theme.spacing.unit,
         borderRadius: '100%',
-        background: '#C6CECD',
+        background: theme.palette.primary.main,
     },
     paperTitle: {
         marginLeft: 2 * theme.spacing.unit,

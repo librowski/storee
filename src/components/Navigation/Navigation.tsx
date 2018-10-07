@@ -22,6 +22,7 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
                 <AppBar
                     position={'static'}
                     className={classNames(classes.appBar, this.state.isDrawerOpen && classes.appBarShift)}
+                    color={'primary'}
                 >
                     <Toolbar
                         disableGutters={!this.state.isDrawerOpen}

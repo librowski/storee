@@ -18,6 +18,7 @@ export const NavigationStyles = (theme: Theme): StyleRules => createStyles({
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
+        backgroundColor: theme.palette.primary.dark,
     },
     appBarShift: {
         marginLeft: drawerWidth,
