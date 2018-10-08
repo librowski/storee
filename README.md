@@ -13,28 +13,12 @@
 <img src="https://camo.githubusercontent.com/047ae46e3a8523c16d66734743de0b9832e71081/68747470733a2f2f692e696d6775722e636f6d2f6f34537a6c59752e676966" />
 
 <h2>Technologies</h2>
-<div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; text-align: center">
-  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
-    <b>React</b>
-    <img src="https://cdn.svgporn.com/logos/react.svg" | width=60>
-  </div>
-  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
-    <b>react-router</b>
-    <img src="https://cdn.svgporn.com/logos/react-router.svg" | width=60>
-  </div>
-  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
-    <b>Redux</b>
-    <img src="https://cdn.svgporn.com/logos/redux.svg" | width=60 />
-  </div>
-  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
-    <b>Material-UI</b>
-    <img src="https://cdn.svgporn.com/logos/material-ui.svg" | width=60>
-  </div>
-  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
-    <b>Firebase</b>
-    <img src="https://cdn.svgporn.com/logos/firebase.svg" | width=60>
-   </div>
-</div>
+
+ 
+
+|![React](https://cdn.svgporn.com/logos/react.svg)|![React Router](https://cdn.svgporn.com/logos/react-router.svg)|![Redux](https://cdn.svgporn.com/logos/redux.svg)|![Material-UI](https://cdn.svgporn.com/logos/material-ui.svg)|![enter image description here](https://cdn.svgporn.com/logos/firebase.svg)|
+|--|--|--|--|--|
+|React|react-router|Redux|Material-UI|Firebase (temporarily)|
   
 <h2>Feature roadmap</h2>
 
