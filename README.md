@@ -13,29 +13,29 @@
 <img src="https://camo.githubusercontent.com/047ae46e3a8523c16d66734743de0b9832e71081/68747470733a2f2f692e696d6775722e636f6d2f6f34537a6c59752e676966" />
 
 <h2>Technologies</h2>
-  <div style="display: flex; flex-direction: row; justify-content: space-around; alignItems: center; text-align: center">
-    <div style="display: flex; justify-content: center, alignItems: center; flex-direction: column">
-      <b>React</b>
-      <img src="https://cdn.svgporn.com/logos/react.svg" | width=60/>
-    </div>
-    <div style="display: flex; justify-content: center, alignItems: center; flex-direction: column">
-      <b>react-router</b>
-      <img src="https://cdn.svgporn.com/logos/react-router.svg" | width=60 />
-    </div>
-    <div style="display: flex; justify-content: center, alignItems: center; flex-direction: column">
-      <b>Redux</b>
-      <img src="https://cdn.svgporn.com/logos/redux.svg" | width=60 />
-    </div>
-    <div style="display: flex; justify-content: center, alignItems: center; flex-direction: column">
-      <b>Material-UI</b>
-      <img src="https://cdn.svgporn.com/logos/material-ui.svg" | width=60 />
-    </div>
-    <div style="display: flex; justify-content: center, alignItems: center; flex-direction: column">
-      <b>Firebase</b>
-      <img src="https://cdn.svgporn.com/logos/firebase.svg" | width=60 />
-      <p>as for now...</p>
-     </div>
+<div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; text-align: center">
+  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
+    <b>React</b>
+    <img src="https://cdn.svgporn.com/logos/react.svg" | width=60>
   </div>
+  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
+    <b>react-router</b>
+    <img src="https://cdn.svgporn.com/logos/react-router.svg" | width=60>
+  </div>
+  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
+    <b>Redux</b>
+    <img src="https://cdn.svgporn.com/logos/redux.svg" | width=60 />
+  </div>
+  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
+    <b>Material-UI</b>
+    <img src="https://cdn.svgporn.com/logos/material-ui.svg" | width=60>
+  </div>
+  <div style="display: flex; justify-content: center, align-items: center; flex-direction: column">
+    <b>Firebase</b>
+    <img src="https://cdn.svgporn.com/logos/firebase.svg" | width=60>
+   </div>
+</div>
+  
 <h2>Feature roadmap</h2>
 
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
