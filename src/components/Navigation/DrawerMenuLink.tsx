@@ -1,55 +1,58 @@
-import * as React from 'react';
-import {RouteComponentProps, withRouter} from "react-router";
-import {createStyles, Fade, ListItem, ListItemIcon, Theme, Typography, WithStyles, withStyles} from "@material-ui/core";
+import * as React from "react";
+import { RouteComponentProps, withRouter } from "react-router";
+import { createStyles, Fade, ListItem, ListItemIcon,
+  Theme, Typography, WithStyles, withStyles } from "@material-ui/core";
+import { StyleRules } from "@material-ui/core/styles";
+import { SvgIconProps } from "@material-ui/core/SvgIcon";
 
-const styles = (theme: Theme) => createStyles({
-    activeLink: {
-        color: theme.palette.primary.dark,
-    },
-    activeMenuItem: {
-        backgroundColor: theme.palette.grey["200"],
-    },
+const styles = (theme: Theme): StyleRules => createStyles({
+  activeLink: {
+    color: theme.palette.primary.dark,
+  },
+  activeMenuItem: {
+    backgroundColor: theme.palette.grey["200"],
+  },
 });
 
 interface DrawerMenuLinkProps {
-    title: string;
-    path: string;
-    icon: React.ReactElement<any>;
-    isDrawerOpen: boolean;
+  title: string;
+  path: string;
+  icon: React.ReactElement<SvgIconProps>;
+  isDrawerOpen: boolean;
 }
 
 class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponentProps & WithStyles<typeof styles>> {
 
-    render() {
-        const isActive = this.props.path === this.props.location.pathname;
-        const {classes} = this.props;
+  public render(): React.ReactNode {
+    const { classes, location, path } = this.props;
+    const isActive = location.pathname !== "/" && path.match(location.pathname);
 
-        return (
-            <ListItem
-                button={true}
-                className={isActive ? classes.activeMenuItem : undefined}
-                onClick={this.handleClick}
-            >
-                <ListItemIcon
-                    className={isActive ? classes.activeLink : undefined}
-                >
-                    {this.props.icon}
-                </ListItemIcon>
-                <Fade in={this.props.isDrawerOpen}>
-                    <Typography
-                        className={isActive ? classes.activeLink : undefined}
-                    >
-                        {this.props.title}
-                    </Typography>
-                </Fade>
-            </ListItem>
-        );
-    }
+    return (
+      <ListItem
+        button={true}
+        className={isActive ? classes.activeMenuItem : undefined}
+        onClick={this.handleClick}
+      >
+        <ListItemIcon
+          className={isActive ? classes.activeLink : undefined}
+        >
+          {this.props.icon}
+        </ListItemIcon>
+        <Fade in={this.props.isDrawerOpen}>
+          <Typography
+            className={isActive ? classes.activeLink : undefined}
+          >
+            {this.props.title}
+          </Typography>
+        </Fade>
+      </ListItem>
+    );
+  }
 
-    private handleClick = (): void => {
-        this.props.history.push(this.props.path);
-    };
+  private readonly handleClick = (): void => {
+    this.props.history.push(this.props.path);
+  }
 
 }
 
-export default withRouter(withStyles(styles,{withTheme: true})(DrawerMenuLink));
+export default withRouter(withStyles(styles, { withTheme: true })(DrawerMenuLink));

@@ -1,11 +1,29 @@
 {
-  "extends": [],
-  "defaultSeverity": "warning",
+  "extends": ["tslint-config-airbnb", "tslint:recommended", "tslint-react"],
+  "defaultSeverity": "error",
+  "rules": {
+    "ordered-imports": false,
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "import-name": false,
+    "no-console": {
+      "severity": "warning"
+    },
+    "no-any": true,
+    "only-arrow-functions": true,
+    "no-invalid-template-strings": true,
+    "triple-equals": true,
+    "prefer-readonly": true,
+    "typedef": {
+      "options": ["arrow-parameter", "parameter", "property-declaration", "call-signature", "arrow-call-signature"]
+    }
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
       "node_modules/**/*.ts",
-      "coverage/lcov-report/*.js"
+      "coverage/lcov-report/*.js",
+      "src/registerServiceWorker.ts"
     ]
   }
 }

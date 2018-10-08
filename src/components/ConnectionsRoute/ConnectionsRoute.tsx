@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
 class ConnectionsRoute extends React.PureComponent {
-    render() {
-        return (
-            <div>
-                Connections
-            </div>
-        );
-    }
+  public render(): React.ReactNode {
+    return (
+      <div>
+        Connections
+      </div>
+    );
+  }
 }
 
 export default ConnectionsRoute;

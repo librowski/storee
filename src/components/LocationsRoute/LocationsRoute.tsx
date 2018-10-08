@@ -1,13 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 
 class LocationsRoute extends React.PureComponent {
-    render() {
-        return (
-            <div>
-                Locations
-            </div>
-        );
-    }
+  public render(): React.ReactNode {
+    return (
+      <div>
+        Locations
+      </div>
+    );
+  }
 }
 
 export default LocationsRoute;

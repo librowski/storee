@@ -1,54 +1,69 @@
-import * as React from 'react';
-import {Grid, Paper, Typography, WithStyles, withStyles} from "@material-ui/core";
-import Truncate from 'react-truncate';
-import {style} from "./EntityCardStyles";
+import * as React from "react";
+import { Grid, Paper, Typography, WithStyles, withStyles } from "@material-ui/core";
+import { entityCardStyles } from "./EntityCardStyles";
+import { RouteComponentProps, withRouter } from "react-router";
+import { Character } from "../../store/Character/types";
+import Truncate from "react-truncate";
 
-type EntityCardProps = {
-    name: string;
-    description: string;
+interface EntityCardOwnProps {
+  id: number;
+  character: Character;
 }
 
-class EntityCard extends React.PureComponent<EntityCardProps & WithStyles<typeof style>> {
+type EntityCardProps = EntityCardOwnProps & RouteComponentProps & WithStyles<typeof entityCardStyles>;
 
-    render() {
-        const {classes, name, description} = this.props;
-        const imageURL = new URL(`https://picsum.photos/300/300/?random?t=${this.props.name + Date.now()}`);
-        const dynamicStyle = {
-            background: `url(${imageURL}) no-repeat center`,
-            backgroundSize: 'cover',
-        };
+class EntityCard extends React.PureComponent<EntityCardProps> {
 
-        return (
-            <Grid
-                item={true}
-                xs={6}
-                sm={3}
-                xl={2}
+  public render(): React.ReactNode {
+    const { classes } = this.props;
+    const { imageURL, name, description } = this.props.character;
+    const dynamicStyle = {
+      background: `url(${imageURL}) no-repeat center`,
+    };
+
+    return (
+      <Grid
+        item={true}
+        xs={12}
+        sm={6}
+        md={4}
+        lg={3}
+        xl={2}
+      >
+        <Paper
+          className={classes.paper}
+          square={true}
+          elevation={6}
+          onClick={this.handleCardClick}
+        >
+          <div className={classes.imageContainer} style={imageURL && dynamicStyle}/>
+          <div className={classes.textContainer}>
+            <Typography
+              align={"center"}
+              variant={"title"}
+              color={"inherit"}
+              className={classes.nameText}
             >
-                    <Paper
-                        className={classes.paper}
-                        square={true}
-                        elevation={6}
-                    >
-                        <div className={classes.imageContainer} style={dynamicStyle}/>
-                        <div className={classes.textContainer}>
-                            <Typography align={'center'} variant={'title'} color={'inherit'} className={classes.nameText}>
-                                {name}
-                            </Typography>
-                            <div className={classes.descriptionDiv}>
-                                <Typography align={'center'} variant={'caption'} color={'inherit'}>
-                                    <Truncate
-                                        lines={8}
-                                    >
-                                        {description}
-                                    </Truncate>
-                                </Typography>
-                            </div>
-                        </div>
-                    </Paper>
-            </Grid>
-        );
-    }
+              {name}
+            </Typography>
+            <div className={classes.descriptionDiv}>
+              <Typography align={"center"} variant={"caption"} color={"inherit"}>
+                <Truncate
+                  lines={8}
+                >
+                  {description}
+                </Truncate>
+              </Typography>
+            </div>
+          </div>
+        </Paper>
+      </Grid>
+    );
+  }
+
+  private readonly handleCardClick = (): void => {
+    this.props.history.push(`characters/${this.props.id}`);
+  }
 }
 
-export default withStyles(style)(EntityCard);
+export default withRouter(withStyles(entityCardStyles)(EntityCard));
