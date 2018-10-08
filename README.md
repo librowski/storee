@@ -18,7 +18,9 @@
 |React|react-router|Redux|Material-UI|Firebase (temporarily)|
   
 <h1>Feature roadmap</h1>
+
 </div>
+
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
 - [ ] Adding, editing, displaying story entities
   - [x] Displaying characters list
