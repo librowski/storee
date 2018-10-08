@@ -7,9 +7,9 @@
     <img src="https://img.shields.io/badge/material--ui-3.1.0-green.svg" />
   </div>
 </div>
+<div align="center">
 <h1>Storee</h1>
-<h2>Quick preview</h2>
-(08.10.18)
+<h2>Quick preview (08.10.18)</h2>
 <img src="https://camo.githubusercontent.com/047ae46e3a8523c16d66734743de0b9832e71081/68747470733a2f2f692e696d6775722e636f6d2f6f34537a6c59752e676966" />
 
 <h2>Technologies</h2>
@@ -21,7 +21,7 @@
 |React|react-router|Redux|Material-UI|Firebase (temporarily)|
   
 <h2>Feature roadmap</h2>
-
+</div>
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
 - [ ] Adding, editing, displaying story entities
   - [x] Displaying characters list
