@@ -1,6 +1,7 @@
 import { createStyles, Theme } from "@material-ui/core";
+import { StyleRules } from "@material-ui/core/styles";
 
-export const entityPaperStyles = (theme: Theme) => createStyles({
+export const entityPaperStyles = (theme: Theme): StyleRules => createStyles({
   mainWrapper: {
     position: "relative",
     flex: "1 1 auto",

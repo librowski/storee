@@ -1,6 +1,7 @@
 import { createStyles, Theme } from "@material-ui/core";
+import { StyleRules } from "@material-ui/core/styles";
 
-export const avatarCardStyles = (theme: Theme) => createStyles({
+export const avatarCardStyles = (theme: Theme): StyleRules => createStyles({
   card: {
     "height": 40 * theme.spacing.unit,
     "position": "relative",
@@ -41,7 +42,6 @@ export const avatarCardStyles = (theme: Theme) => createStyles({
       width: -24 * theme.spacing.unit,
       zIndex: 1,
     },
-    "background": `url(https://picsum.photos/300/300/?random?t=${Date.now()}) no-repeat center`,
     "backgroundSize": "cover",
   },
   nameContainer: {

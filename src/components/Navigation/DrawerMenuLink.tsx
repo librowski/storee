@@ -3,6 +3,7 @@ import { RouteComponentProps, withRouter } from "react-router";
 import { createStyles, Fade, ListItem, ListItemIcon,
   Theme, Typography, WithStyles, withStyles } from "@material-ui/core";
 import { StyleRules } from "@material-ui/core/styles";
+import { SvgIconProps } from "@material-ui/core/SvgIcon";
 
 const styles = (theme: Theme): StyleRules => createStyles({
   activeLink: {
@@ -16,7 +17,7 @@ const styles = (theme: Theme): StyleRules => createStyles({
 interface DrawerMenuLinkProps {
   title: string;
   path: string;
-  icon: React.ReactElement<any>;
+  icon: React.ReactElement<SvgIconProps>;
   isDrawerOpen: boolean;
 }
 
@@ -48,7 +49,7 @@ class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponen
     );
   }
 
-  private handleClick = (): void => {
+  private readonly handleClick = (): void => {
     this.props.history.push(this.props.path);
   }
 

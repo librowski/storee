@@ -24,8 +24,10 @@ class EntityCard extends React.PureComponent<EntityCardProps> {
     return (
       <Grid
         item={true}
-        xs={6}
-        sm={3}
+        xs={12}
+        sm={6}
+        md={4}
+        lg={3}
         xl={2}
       >
         <Paper
@@ -59,7 +61,7 @@ class EntityCard extends React.PureComponent<EntityCardProps> {
     );
   }
 
-  private handleCardClick = (): void => {
+  private readonly handleCardClick = (): void => {
     this.props.history.push(`characters/${this.props.id}`);
   }
 }

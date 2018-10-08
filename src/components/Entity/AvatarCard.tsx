@@ -10,13 +10,16 @@ interface AvatarCardProps {
 
 class AvatarCard extends React.Component<AvatarCardProps & WithStyles<typeof avatarCardStyles>> {
   public render(): React.ReactNode {
-    const { classes } = this.props;
+    const { classes, character } = this.props;
+    const dynamicStyle = {
+      background: `url(${character.imageURL}) no-repeat center`,
+    };
     return (
       <Paper square={true} elevation={3} className={classes.card}>
         <div className={classes.contentContainer}>
           <div className={classes.nameContainer}>
             <Typography className={classes.name} variant={"title"} color={"inherit"}>
-              Habadiba Pertebralis
+              {character.name}
             </Typography>
           </div>
           <div className={classes.badgesContainer}>
@@ -30,7 +33,7 @@ class AvatarCard extends React.Component<AvatarCardProps & WithStyles<typeof ava
               <Add color={"inherit"}/>
             </Paper>
           </div>
-          <Paper elevation={4} className={classes.avatar}/>
+          <Paper elevation={4} className={classes.avatar} style={dynamicStyle}/>
         </div>
       </Paper>
     );

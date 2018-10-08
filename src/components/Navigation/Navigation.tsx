@@ -63,11 +63,11 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
     );
   }
 
-  private handleDrawerOpen = (): void => {
+  private readonly handleDrawerOpen = (): void => {
     this.setState({ isDrawerOpen: true });
   }
 
-  private handleDrawerClose = (): void => {
+  private readonly handleDrawerClose = (): void => {
     this.setState({ isDrawerOpen: false });
   }
 }

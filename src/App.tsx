@@ -52,7 +52,7 @@ const theme = createMuiTheme({
 });
 
 class App extends React.Component {
-  public render() {
+  public render(): React.ReactNode {
     return (
       <Provider store={store}>
         <React.Fragment>

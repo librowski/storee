@@ -3,12 +3,11 @@ import { CharacterAction } from "../../store/Character/reducer";
 import { Dispatch } from "redux";
 import { getCharacters } from "../../store/Character/actions";
 import { connect } from "react-redux";
-import { Grid } from "@material-ui/core";
 import { Character } from "../../store/Character/types";
 import { AppState } from "../../App";
-import EntityCard from "../EntityCard/EntityCard";
-import { Route, Switch } from "react-router";
-import Entity from "../Entity/Entity";
+import { match as Match, Route, Switch } from "react-router";
+import CharacterCollection from "../CharacterCollection/CharacterCollection";
+import CharacterResource from "../CharacterResource/CharacterResource";
 
 interface CharactersRouteProps {
   fetchCharacters: () => void;
@@ -30,29 +29,23 @@ class CharactersRoute extends React.Component<CharactersRouteProps> {
   }
 
   public render(): React.ReactNode {
-    const charactersList: React.ReactNode[] = this.props.characters.map(
-      (character: Character, index: number) => {
-        return (
-          <EntityCard
-            key={index}
-            id={index}
-            character={character}
-          />
-        );
-      });
+
     return (
       <Switch>
         <Route
           path="/characters/:id(\d+)"
-          component={Entity}
+          render={this.renderCharacterResource}
         />
         <Route>
-          <Grid container={true} spacing={24}>
-            {charactersList}
-          </Grid>
+            <CharacterCollection characters={this.props.characters}/>
         </Route>
       </Switch>
     );
+  }
+
+  private readonly renderCharacterResource = ({ match }: { match: Match<{ id: string }> }): React.ReactNode => {
+    const character = this.props.characters[match.params.id];
+    return <CharacterResource character={character}/>;
   }
 }
 

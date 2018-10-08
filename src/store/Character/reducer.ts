@@ -10,7 +10,7 @@ const initialState: Characters = {
   isPendingUpdate: false,
 };
 
-export const charactersReduce = (state = initialState, action: CharacterAction): Characters => {
+export const charactersReduce = (state: Characters = initialState, action: CharacterAction): Characters => {
   switch (action.type) {
     case CharacterActionTypes.CHARACTER_FETCH_REQUEST:
       return { ...state, isPendingFetch: true };
