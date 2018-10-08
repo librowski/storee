@@ -8,19 +8,16 @@
   </div>
 </div>
 <div align="center">
-<h1>Storee</h1>
-<h2>Quick preview (08.10.18)</h2>
+<h1>Quick preview (08.10.18)</h1>
 <img src="https://camo.githubusercontent.com/047ae46e3a8523c16d66734743de0b9832e71081/68747470733a2f2f692e696d6775722e636f6d2f6f34537a6c59752e676966" />
 
-<h2>Technologies</h2>
-
- 
+<h1>Technologies</h1>
 
 |![React](https://cdn.svgporn.com/logos/react.svg)|![React Router](https://cdn.svgporn.com/logos/react-router.svg)|![Redux](https://cdn.svgporn.com/logos/redux.svg)|![Material-UI](https://cdn.svgporn.com/logos/material-ui.svg)|![enter image description here](https://cdn.svgporn.com/logos/firebase.svg)|
 |--|--|--|--|--|
 |React|react-router|Redux|Material-UI|Firebase (temporarily)|
   
-<h2>Feature roadmap</h2>
+<h1>Feature roadmap</h1>
 </div>
 - [x] Sidepanel for switching between story entities (characters, places, groups, threads and relations)
 - [ ] Adding, editing, displaying story entities
