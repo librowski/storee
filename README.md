@@ -13,7 +13,7 @@
 <img src="https://camo.githubusercontent.com/047ae46e3a8523c16d66734743de0b9832e71081/68747470733a2f2f692e696d6775722e636f6d2f6f34537a6c59752e676966" />
 
 <h2>Technologies</h2>
-  <div style="display: flex, justify-content: center, alignItems: center, text-align: center">
+  <div style="display: flex, flex-direction: 'row', justify-content: center, alignItems: center, text-align: center">
     <div style="display: flex, justify-content: center, alignItems: center, flex-direction: column">
       <img src="https://cdn.svgporn.com/logos/react.svg" | width=100/>
       <b>React</b>
