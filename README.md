@@ -1,5 +1,6 @@
 <div align="center">
 <img src="https://i.imgur.com/MREVFNF.png" />
+<img src="https://img.shields.io/badge/react-16.5.1-blue.svg" />
 <p>Prototype of application for writers, rpg game masters and other creators of plots and stories</p>
 </div>
 
