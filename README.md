@@ -1,6 +1,10 @@
 <div align="center">
 <img src="https://i.imgur.com/MREVFNF.png" />
-<img src="https://img.shields.io/badge/react-16.5.1-blue.svg" />
+<div style="display: flex, justify-content: center, alignItems: center">
+  <img src="https://img.shields.io/badge/react-16.5.1-blue.svg" />
+  <img src="https://img.shields.io/badge/react--redux-5.0.7-orange.svg" />
+  <img src="https://img.shields.io/badge/material--ui-3.1.0-green.svg" />
+</div>
 <p>Prototype of application for writers, rpg game masters and other creators of plots and stories</p>
 </div>
 
