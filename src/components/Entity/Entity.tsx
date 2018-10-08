@@ -16,7 +16,7 @@ interface EntityProps {
 }
 
 class Entity extends React.Component<EntityProps> {
-  public render() {
+  public render(): React.ReactNode {
     const { character } = this.props;
 
     return (

@@ -15,23 +15,23 @@ interface CharactersRouteProps {
   characters: Character[];
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<CharacterAction>) => ({
-  fetchCharacters: () => getCharacters()(dispatch),
+const mapDispatchToProps = (dispatch: Dispatch<CharacterAction>): Partial<CharactersRouteProps> => ({
+  fetchCharacters: (): void => getCharacters()(dispatch),
 });
 
-const mapStateToProps = (state: AppState) => ({
+const mapStateToProps = (state: AppState): Partial<CharactersRouteProps> => ({
   characters: state.characters.data,
 });
 
 class CharactersRoute extends React.Component<CharactersRouteProps> {
 
-  public componentDidMount() {
+  public componentDidMount(): void {
     this.props.fetchCharacters();
   }
 
-  public render() {
-    const charactersList = this.props.characters.map(
-      (character, index) => {
+  public render(): React.ReactNode {
+    const charactersList: React.ReactNode[] = this.props.characters.map(
+      (character: Character, index: number) => {
         return (
           <EntityCard
             key={index}

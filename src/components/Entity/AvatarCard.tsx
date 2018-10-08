@@ -9,7 +9,7 @@ interface AvatarCardProps {
 }
 
 class AvatarCard extends React.Component<AvatarCardProps & WithStyles<typeof avatarCardStyles>> {
-  public render() {
+  public render(): React.ReactNode {
     const { classes } = this.props;
     return (
       <Paper square={true} elevation={3} className={classes.card}>

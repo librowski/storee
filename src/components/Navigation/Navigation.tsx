@@ -15,7 +15,7 @@ class Navigation extends React.Component<WithStyles<typeof NavigationStyles>, Na
     isDrawerOpen: false,
   };
 
-  public render() {
+  public render(): React.ReactNode {
     const { classes } = this.props;
     return (
       <div className={classes.root}>

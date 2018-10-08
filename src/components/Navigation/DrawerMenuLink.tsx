@@ -2,8 +2,9 @@ import * as React from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import { createStyles, Fade, ListItem, ListItemIcon,
   Theme, Typography, WithStyles, withStyles } from "@material-ui/core";
+import { StyleRules } from "@material-ui/core/styles";
 
-const styles = (theme: Theme) => createStyles({
+const styles = (theme: Theme): StyleRules => createStyles({
   activeLink: {
     color: theme.palette.primary.dark,
   },
@@ -21,7 +22,7 @@ interface DrawerMenuLinkProps {
 
 class DrawerMenuLink extends React.Component<DrawerMenuLinkProps & RouteComponentProps & WithStyles<typeof styles>> {
 
-  public render() {
+  public render(): React.ReactNode {
     const { classes, location, path } = this.props;
     const isActive = location.pathname !== "/" && path.match(location.pathname);
 

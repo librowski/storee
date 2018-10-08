@@ -14,7 +14,7 @@ type EntityCardProps = EntityCardOwnProps & RouteComponentProps & WithStyles<typ
 
 class EntityCard extends React.PureComponent<EntityCardProps> {
 
-  public render() {
+  public render(): React.ReactNode {
     const { classes } = this.props;
     const { imageURL, name, description } = this.props.character;
     const dynamicStyle = {
@@ -59,7 +59,7 @@ class EntityCard extends React.PureComponent<EntityCardProps> {
     );
   }
 
-  private handleCardClick = () => {
+  private handleCardClick = (): void => {
     this.props.history.push(`characters/${this.props.id}`);
   }
 }

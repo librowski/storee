@@ -8,6 +8,14 @@
     "import-name": false,
     "no-console": {
       "severity": "warning"
+    },
+    "no-any": true,
+    "only-arrow-functions": true,
+    "no-invalid-template-strings": true,
+    "triple-equals": true,
+    "prefer-readonly": true,
+    "typedef": {
+      "options": ["arrow-parameter", "parameter", "property-declaration", "call-signature", "arrow-call-signature"]
     }
   },
   "linterOptions": {

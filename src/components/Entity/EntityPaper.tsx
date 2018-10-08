@@ -9,7 +9,7 @@ interface EntityPaperProps {
 }
 
 class AvatarCard extends React.Component<EntityPaperProps & WithStyles<typeof entityPaperStyles>> {
-  public render() {
+  public render(): React.ReactNode {
     const { classes } = this.props;
     return (
       <div className={classes.mainWrapper}>
