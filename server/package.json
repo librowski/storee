@@ -1,0 +1,19 @@
+{
+  "name": "storee-backend",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Librowski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.5",
+    "pg": "^7.6.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.41.0",
+    "sequelize-cli": "^5.2.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "libros",
+    "password": "abc",
+    "database": "storee",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "libros",
+    "password": "abc",
+    "database": "storee",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "libros",
+    "password": "abc",
+    "database": "storee",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
