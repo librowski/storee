@@ -6,6 +6,14 @@ const app = express();
 const port = 8000;
 
 app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/characters', async (req, res, next) => {
+  try {
+    const entities = await models.Entity.findAll();
+    res.send(entities);
+  } catch (error) {
+    next(error);
+  }
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
